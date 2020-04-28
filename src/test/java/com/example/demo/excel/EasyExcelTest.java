@@ -3,6 +3,7 @@ package com.example.demo.excel;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import com.example.demo.easyexcel.EasyExcelUtil;
 import com.example.demo.easyexcel.ExcelModel;
+import org.junit.Test;
 import org.springframework.util.StringUtils;
 
 import java.io.*;
@@ -70,4 +71,13 @@ public class EasyExcelTest {
         }
     }
 
+
+    @Test
+    public void testList() {
+        List list = new ArrayList();
+        list.add("1");
+        list.add(0,"2");
+        list.add(0,"3");
+        System.out.println("list = " + list);
+    }
 }

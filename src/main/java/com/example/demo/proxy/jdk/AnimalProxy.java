@@ -25,13 +25,6 @@ public class AnimalProxy implements InvocationHandler {
         System.out.println("调用后");
         return result;
     }
-
-    public static void main(String[] args) {
-        // JDK 动态代理调用
-        AnimalProxy proxy = new AnimalProxy();
-        Animal dogProxy = (Animal) proxy.getInstance(new Dog());
-        dogProxy.eat();
-    }
 }
 
 

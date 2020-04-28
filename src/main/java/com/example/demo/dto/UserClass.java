@@ -11,12 +11,7 @@ public class UserClass {
         return "name";
     }
 
-    public static void main(String[] args) throws Exception {
-        String className = "com.example.demo.dto.UserClass";
-         ClassLoader.getSystemClassLoader().loadClass(className);
-        System.out.println("------------ " );
-        Class.forName(className);
-
-
+    public UserClass() {
+        System.out.println("111 = " + 111);
     }
 }

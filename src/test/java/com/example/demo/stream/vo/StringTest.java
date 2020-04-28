@@ -2,10 +2,9 @@ package com.example.demo.stream.vo;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class StringTest {
     public static void main(String[] args) {
@@ -19,6 +18,12 @@ public class StringTest {
         if(list.containsAll(subList)) {
             System.out.println(true);
         }
+        Map<String,Cat> map = new HashMap<>();
+        Cat c1 = new Cat();
+        c1.setName("张三");
+        map.put("c1",c1);
+        c1.setName("李四");
+        System.out.println("map = " + map);
     }
 
     @Test
@@ -28,4 +33,11 @@ public class StringTest {
         Date parse = sdf.parse(time);
         System.out.println("parse = " + parse.getTime());
     }
+
+    @Test
+    public void testNum() {
+        BigDecimal discount=new BigDecimal("17.9400").setScale(4, BigDecimal.ROUND_HALF_UP);
+
+    }
+
 }

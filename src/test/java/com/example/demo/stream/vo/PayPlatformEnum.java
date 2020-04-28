@@ -52,5 +52,7 @@ public enum PayPlatformEnum {
     public static void main(String[] args) {
         PayPlatformEnum wechat = getEnumByCode("WECHAT");
         System.out.println(wechat);
+        WECHAT.equals(WECHAT);
+        System.out.println("HMS.equals(WECHAT) = " + HMS.equals(WECHAT));
     }
 }

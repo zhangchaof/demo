@@ -6,8 +6,15 @@ import net.sf.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 
+/**
+ * @author chaofan.zhang
+ */
 public class CglibProxy implements MethodInterceptor {
-    private Object target; // 代理对象
+    /**
+     * 代理对象
+     */
+    private Object target;
+
     public Object getInstance(Object target) {
         this.target = target;
         Enhancer enhancer = new Enhancer();
@@ -18,6 +25,7 @@ public class CglibProxy implements MethodInterceptor {
         // 创建代理对象
         return enhancer.create();
     }
+
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("调用前");
@@ -25,12 +33,5 @@ public class CglibProxy implements MethodInterceptor {
         Object result = methodProxy.invokeSuper(o, objects);
         System.out.println("调用后");
         return result;
-    }
-
-    public static void main(String[] args) {
-        // CGLIB 动态代理调用
-        CglibProxy proxy = new CglibProxy();
-        Panda panda = (Panda)proxy.getInstance(new Panda());
-        panda.eat();
     }
 }

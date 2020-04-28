@@ -14,7 +14,7 @@
 
         <jdbcConnection
                 driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://localhost:3306/fms-bill99?useUnicode=true&amp;characterEncoding=utf-8&amp;noAccessToProcedureBodies=true"
+                connectionURL="jdbc:mysql://localhost:3306/fms_bill99?useUnicode=true&amp;characterEncoding=utf-8&amp;noAccessToProcedureBodies=true"
                 userId="root"
                 password="root"/>
         <javaTypeResolver>
@@ -44,7 +44,7 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table schema="fms_yqzl" tableName="business_enums" domainObjectName="BusinessEnums" enableCountByExample="false"
+        <table schema="fms_bill99" tableName="t_notify_info_log" domainObjectName="NotifyInfoLogDO" enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
             <generatedKey column="ID" sqlStatement="MySql" identity="true"/>
         </table>
