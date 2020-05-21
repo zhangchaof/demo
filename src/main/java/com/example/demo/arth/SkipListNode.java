@@ -2,8 +2,6 @@ package com.example.demo.arth;
 
 /**
  * 跳跃表的节点,包括key-value和上下左右4个指针
- * created by 曹艳丰，2016-08-14
- * 参考：http://www.acmerblog.com/skip-list-impl-java-5773.html
  */
 public class SkipListNode<T> {
     public int key;
